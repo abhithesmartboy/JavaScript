@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Music Player</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <img src="./images/spotify2.png" id="logo">
+
+    <div class="box">
+        <h2 id="title">Ishq Hai</h2>
+        <img src="./images/ishq.jpg" id="songImg" class="rotate">
+
+        <audio src="./music/song1.mp3" id="audio"></audio>
+
+        <input type="range" id="progress" value="0">
+
+        <div class="time-info">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="btn">
+            <i class="fa-solid fa-backward" onclick="prevSong()"></i>
+            <i class="fa-solid fa-random" id="shuffleBtn" onclick="toggleShuffle()"></i>
+            <i class="fa-solid fa-pause" onclick="apause()"></i>
+            <i class="fa-solid fa-play" onclick="aplay()"></i>
+            <i class="fa-solid fa-repeat" id="loopBtn" onclick="toggleLoop()"></i>
+            <i class="fa-solid fa-forward" onclick="nextSong()"></i>
+        </div>
+
+        <label>Volume</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+
+        <ul id="playlist"></ul>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
