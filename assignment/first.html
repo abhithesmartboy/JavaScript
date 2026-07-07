@@ -1,0 +1,36 @@
+<!-- // WAP to search a number using linear search. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sub() {
+
+            let a = document.getElementById('num');
+            let d = Number(window.prompt("Enter the number to search"));
+            let found = false;
+            a.forEach((b) => {
+                if (d === b) {
+                    alert("Number found");
+                    found = true;
+                }
+            });
+            if (!found) {
+                alert("Number not found");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Enter the numbers :
+    <input type="number" id="num">
+    <input type="submit" value="submit" onclick="sub()">
+</body>
+
+</html>
