@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        .filter{
+            height: 40px;
+            width: 500px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 50px auto;
+            font-size: 22px;
+        }
+
+        .item{
+            height: 40px;
+            width: 50px;
+            background-color: rgb(149, 165, 42);
+            text-align: center;
+            border-radius: 5px;
+        }
+        .box{
+            height: 200px;
+            width: 1500px;
+            text-align: center;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            margin: 50px auto;
+
+
+        }
+        .card{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(149, 165, 42);
+         font-size: 44px;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+  
+   <div class="filter">
+    <div class="item all" onclick="a('all')">All</div>
+    <div class="item a" onclick="a('a')">A</div>
+    <div class="item b" onclick="a('b')">B</div>
+    <div class="item c" onclick="a('c')">C</div>
+   </div> 
+    <div class="box">
+        <div class="card a">A</div>
+        <div class="card b">B</div>
+        <div class="card c">C</div>
+        <div class="card d">D</div>
+        <div class="card a">A</div>
+        <div class="card b">B</div>
+        <div class="card c">C</div>
+    </div>
+
+    <script>
+function a(d){
+    let card = document.querySelectorAll('.card')
+    if(d=="all"){
+        card.forEach((e)=>{
+            e.classList.remove("hide")
+        })
+    } else{
+    card.forEach((e)=>{
+     // console.log(e.classList);
+     if(!(e.classList[1]==d)){
+        e.classList.add("hide")
+     }
+     else{
+        e.classList.remove("hide")
+     }
+
+    })
+
+}
+}
+    </script>
+</body>
+</html>

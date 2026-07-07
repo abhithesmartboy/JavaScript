@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row ">
+<div class="col-sm-12 text-center">
+            <h1>Blogs</h1>
+</div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                       Create blog
+                    </a>
+                    
+
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            Enter title:
+                            <input type="text" id="title" class="form-control">
+                            <br>
+                            Enter blog:
+                            <textarea name="" id="blog" class="form-control"></textarea>
+                            <br>
+                            Enter tag:
+                            <input type="text" id="tag" class="form-control">
+                            <br>
+                            <button class="btn btn-primary" onclick="save()">Save post</button>
+                            <div id="al"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="post"></div>
+            </div>
+
+        </div>
+        
+
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

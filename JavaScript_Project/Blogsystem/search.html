@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 400px;
+            width: 300px;
+            background-color: lightblue;
+            font-size: 25px;
+            margin: 10px;
+            vertical-align: top;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="search" placeholder="Search..." id="srch">
+    <br><br>
+
+    <div class="items">
+        <div class="box">C is a programming language</div>
+        <div class="box">PHP is a server-side scripting language</div>
+        <div class="box">JAVA is a programming language</div>
+        <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius.</div>
+    </div>
+
+    <script>
+        let srch = document.getElementById('srch');
+        let box = document.getElementsByClassName('.box');
+        srch.addEventListener('input', (e) => {
+            box.forEach((a, i) => {
+                if (a.innerHTML.toLowerCase().includes(srch.value)) {
+                    a.classList.remove('hide')
+                }
+                else {
+                    a.classList.add('hide');
+                }
+
+            })
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

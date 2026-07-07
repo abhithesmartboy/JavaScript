@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, temporibus.</p>
+    <textarea  id="t"></textarea>
+    <script>
+        p.addEventListener("copy", (e)=>{
+            e.preventDefault();
+            window.alert("Copying is disabled on this webpage");
+        });
+        t.addEventListener("paste", (e)=>{
+            e.preventDefault();
+            window.alert("Pasting is disabled on this webpage");
+        });
+    </script>
+</body>
+</html>

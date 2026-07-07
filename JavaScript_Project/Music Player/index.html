@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Abhi's Music Player</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="./images/abhi3.png" type="image/x-icon">
+</head>
+<body>
+    <img src="./images/abhi4.png" alt="" sizes="" srcset="" id="logo">
+    <div class="box">
+        <h2 id="title" style="font-family: Georgia, 'Times New Roman', Times, serif;">Ishq Hai</h2>
+        <img src="./images/ishq.jpg" id="songImg" class="rotate">
+        <audio src="./music/song1.mp3" id="audio"></audio>
+        <input type="range" id="progress" value="0">
+
+        <div class="btn">
+            <i class="fa-solid fa-backward" onclick="prevSong()"></i>
+            <i class="fa-solid fa-pause" onclick="apause()"></i>
+            <i class="fa-solid fa-play" onclick="aplay()"></i>
+            <i class="fa-solid fa-forward" onclick="nextSong()"></i>
+        </div>
+    </div>
+
+    
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
