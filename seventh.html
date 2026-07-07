@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        let n = Number(prompt("Enter number of terms:"));
+        let a = 0, b = 1;
+        let next = a + " " + b;
+
+        for (let i = 3; i <= n; i++) {
+            let c = a + b;
+            next += " " + c;
+            a = b;
+            b = c;
+        }
+
+        console.log(next);
+        document.write(next);
+
+    </script>
+</body>
+
+</html>

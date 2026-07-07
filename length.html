@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get length</title>
+</head>
+<body>
+    <!-- <h1 id="h">Hey ! This is Abhi, What happend</h1>
+        <button onclick="fun()" >Click Here</button>
+    <script>
+        function fun() {
+            let a = document.getElementById('h');
+            // a.id = "outer";
+            //console.log(a);
+            a.innerHTML = "Abhishek Prajapati";
+            console.log (a.innerHTML);
+        } -->
+
+        Enter Mobile Number :
+        <input type="text" name="" id="num">
+        <span id="nm"></span>
+        <br>
+        <button onclick="ch()">Check</button>
+        <script>
+            function ch(){
+                let a = document.getElementById('num');
+                if(a.value.length != 10){
+                    a.style.border="2px solid red";
+                    document.getElementById('nm').innerHTML = "* Invalid number";
+                    document.getElementById('nm').style.color='red';
+                }
+                else{
+                    a.style.border="2px solid black";
+                    document.getElementById('nm').innerHTML = "";
+                    document.getElementById('nm').style.color='';
+                }
+                
+            }
+        </script>
+    </script>
+</body>
+</html>

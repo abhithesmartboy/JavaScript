@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Required Validation</title>
+</head>
+<body>
+    Enter name:
+    <input type="text" name="" id="h">
+    <span id="hh"></span>
+    <br>
+    Enter Email:
+    <input type="text" name="" id="email">
+    <span id="em"></span>
+    <br>
+    <button onclick="ch()">check</button>
+    
+    <script>
+        function ch(){
+           let a = document.getElementById('h');
+           let email = document.getElementById('email');
+           if(a.value.trim()==""){
+            //alert("please inter your name");
+            a.style.border = "2px solid red";
+            document.getElementById('hh').style.color='red';
+            document.getElementById('hh').innerHTML = "* Invalid Name";
+           }
+           else{
+            //alert("valid name");
+            a.style.border = "2px solid black";
+            document.getElementById('hh').style.color='';
+            document.getElementById('hh').innerHTML = "";
+           }
+           if(email.value.trim()==''){
+            email.style.border = "2px solid red";
+            document.getElementById('em').style.color='red';
+            document.getElementById('em').innerHTML = "* Invalid Email";
+           }
+           else{
+            email.style.border = "2px solid black";
+            document.getElementById('em').style.color='';
+            document.getElementById('em').innerHTML = "";
+           }
+           console.log(a);
+        }
+    </script>
+</body>
+</html>

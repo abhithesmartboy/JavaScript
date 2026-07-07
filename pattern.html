@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Name:
+    <input type="text" placeholder="Enter Name" id="name">
+    <span id=""nm></span>
+    <br>
+    <button onclick="ch()">Check</button>
+    <script>
+        function ch(){
+            let name = document.getElementById('name');
+            let pname = /^[a-zA-Z]{3,60}$/
+            let c = pname.test(name.value);
+            if(!c){
+                name.style.border = "2px solid red";
+            }
+            console.log(c);
+        }
+    </script>
+</body>
+</html>

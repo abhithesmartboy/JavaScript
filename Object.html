@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        //Using Literals
+        // const a = {name:"Abhishek",salary:2000};
+        // //console.log(a);
+        // //console.log(name);
+        // //console.log(salary);
+        // greet:()=>{
+        // window.alert("Hello");
+        // }
+        // console.log(a.greet);
+
+
+        // var student = {
+        //     name: "Abhishek",
+        //     age: 20,
+        //     course: "BCA",
+        //     display: function () {
+        //         // document.write("Name: " + this.name + "<br>");
+        //         // document.write("Age: " + this.age + "<br>");
+        //         // document.write("Course: " + this.course);
+        //         console.log("Name: " + this.name);
+        //         console.log("Age: " + this.age);
+        //         console.log("Course: " + this.course);
+        //     }
+        // };
+
+        // student.display();
+
+
+        //Using Constructor
+        //     const a = Object({
+        //         name:"Abhishek", 
+        //         salary:3000,
+        //         Ar:[1,2,3,4,5]
+        //     })
+        //     a.name="Raj";
+        //     console.log(a);
+        //     console.log(a.Ar);
+
+        function Student(n, a, c) {
+            this.name = n;
+            this.age = a;
+            this.course = c;
+        }
+
+        var s1 = new Student("Akash", 21, "BCA");
+        var s2 = new Student("Rohan", 22, "BBA");
+        var s3 = new Student("Abhi", 22, "BBA");
+        var s4 = new Student("Rajnish", 22, "BBA");
+
+       // document.write("Student 1: " + s1.name + ", " + s1.age + ", " + s1.course + "<br>");
+        //document.write("Student 2: " + s2.name + ", " + s2.age + ", " + s2.course);
+        console.log("Student 1: " + s1.name + ", " + s1.age + ", " + s1.course);
+        console.log("Student 2: " + s2.name + ", " + s2.age + ", " + s2.course);
+        console.log("Student 3: " + s3.name + ", " + s3.age + ", " + s3.course);
+        console.log("Student 4: " + s4.name + ", " + s4.age + ", " + s4.course);
+        
+
+    </script>
+</body>
+
+</html>

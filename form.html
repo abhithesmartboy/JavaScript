@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Regestration Form</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    <form id="studentForm" onsubmit="sub(event)">
+        
+        Full Name:
+        <input type="text" name="fullName" id="fullName" required><br><br>
+
+        
+        Father Name:
+        <input type="text" name="fatherName" id="fatherName"><br><br>
+
+        
+        Mother Name:
+        <input type="text" name="motherName" id="motherName"><br><br>
+
+        
+        Email:
+        <input type="email" name="email" id="email"><br><br>
+
+       
+        Phone:
+        <input type="tel" name="phone" id="phone"><br><br>
+
+       
+        Alternate Phone:
+        <input type="tel" name="altPhone" id="altPhone"><br><br>
+
+        
+        Date of Birth:
+        <input type="date" name="dob" id="dob"><br><br>
+
+        
+        Gender:
+        <select name="gender" id="gender">
+            <option value="">--Select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+       
+        Address Line 1:
+        <input type="text" name="addr1" id="addr1"><br><br>
+
+        
+        Address Line 2:
+        <input type="text" name="addr2" id="addr2"><br><br>
+
+        
+        City:
+        <input type="text" name="city" id="city"><br><br>
+
+        
+        State:
+        <input type="text" name="state" id="state"><br><br>
+
+        
+        Pincode:
+        <input type="number" name="pincode" id="pincode"><br><br>
+
+        
+        Country:
+        <input type="text" name="country" id="country" value="India"><br><br>
+
+        
+        Course Name:
+        <input type="text" name="course" id="course"><br><br>
+
+        
+        College Name:
+        <input type="text" name="college" id="college"><br><br>
+
+        
+        Roll Number:
+        <input type="text" name="roll" id="roll"><br><br>
+
+        
+        Semester:
+        <input type="number" name="semester" id="semester" min="1" max="8"><br><br>
+
+        
+        10th Percentage:
+        <input type="number" name="tenth" id="tenth" step="0.01"><br><br>
+
+        
+        12th Percentage:
+        <input type="number" name="twelfth" id="twelfth" step="0.01"><br><br>
+
+        
+        Graduation Percentage:
+        <input type="number" name="grad" id="grad" step="0.01"><br><br>
+
+        
+        Skills:
+        <input type="text" name="skills" id="skills" placeholder="C, C++, Java, PHP"><br><br>
+
+        
+        Username:
+        <input type="text" name="username" id="username"><br><br>
+
+        
+        Password:
+        <input type="password" name="password" id="password"><br><br>
+
+        
+        Confirm Password:
+        <input type="password" name="cpassword" id="cpassword"><br><br>
+
+        
+        Security Question:
+        <input type="text" name="secQ" id="secQ" placeholder="Your pet name?"><br><br>
+
+       
+        Security Answer:
+        <input type="text" name="secA" id="secA"><br><br>
+
+        
+        Hobbies:
+        <input type="text" name="hobbies" id="hobbies"><br><br>
+
+        
+        About Yourself:
+        <textarea name="about" id="about" rows="3" cols="30"></textarea><br><br>
+
+        
+        <label>
+            <input type="checkbox" name="agree" id="agree">
+            I agree to all terms & conditions
+        </label><br><br>
+
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset">
+    </form>
+
+    <hr>
+
+    
+    <div id="result"></div>
+
+    <script>
+        function sub(event) {
+            event.preventDefault(); 
+
+            var output = "";
+            output += "<b>Full Name:</b> " + document.getElementById("fullName").value + "<br>";
+            output += "<b>Father Name:</b> " + document.getElementById("fatherName").value + "<br>";
+            output += "<b>Mother Name:</b> " + document.getElementById("motherName").value + "<br>";
+            output += "<b>Email:</b> " + document.getElementById("email").value + "<br>";
+            output += "<b>Phone:</b> " + document.getElementById("phone").value + "<br>";
+            output += "<b>Alternate Phone:</b> " + document.getElementById("altPhone").value + "<br>";
+            output += "<b>Date of Birth:</b> " + document.getElementById("dob").value + "<br>";
+            output += "<b>Gender:</b> " + document.getElementById("gender").value + "<br>";
+            output += "<b>Address 1:</b> " + document.getElementById("addr1").value + "<br>";
+            output += "<b>Address 2:</b> " + document.getElementById("addr2").value + "<br>";
+            output += "<b>City:</b> " + document.getElementById("city").value + "<br>";
+            output += "<b>State:</b> " + document.getElementById("state").value + "<br>";
+            output += "<b>Pincode:</b> " + document.getElementById("pincode").value + "<br>";
+            output += "<b>Country:</b> " + document.getElementById("country").value + "<br>";
+            output += "<b>Course:</b> " + document.getElementById("course").value + "<br>";
+            output += "<b>College:</b> " + document.getElementById("college").value + "<br>";
+            output += "<b>Roll No:</b> " + document.getElementById("roll").value + "<br>";
+            output += "<b>Semester:</b> " + document.getElementById("semester").value + "<br>";
+            output += "<b>10th %:</b> " + document.getElementById("tenth").value + "<br>";
+            output += "<b>12th %:</b> " + document.getElementById("twelfth").value + "<br>";
+            output += "<b>Graduation %:</b> " + document.getElementById("grad").value + "<br>";
+            output += "<b>Skills:</b> " + document.getElementById("skills").value + "<br>";
+            output += "<b>Username:</b> " + document.getElementById("username").value + "<br>";
+            output += "<b>Password:</b> " + document.getElementById("password").value + "<br>";
+            output += "<b>Confirm Password:</b> " + document.getElementById("cpassword").value + "<br>";
+            output += "<b>Security Question:</b> " + document.getElementById("secQ").value + "<br>";
+            output += "<b>Security Answer:</b> " + document.getElementById("secA").value + "<br>";
+            output += "<b>Hobbies:</b> " + document.getElementById("hobbies").value + "<br>";
+            output += "<b>About:</b> " + document.getElementById("about").value + "<br>";
+            output += "<b>Agreed Terms:</b> " + (document.getElementById("agree").checked ? "Yes" : "No") + "<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

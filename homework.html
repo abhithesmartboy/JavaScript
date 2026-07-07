@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Field Validation Form</title>
+</head>
+<style>
+    form{
+        border: 2px solid gray;
+        width: 400px;
+        margin: auto;
+        padding: 10px;
+        box-shadow: 5px 5px 10px black;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <form action="">
+        <h1>Validation</h1>
+        Enter Name:
+        <input type="text" placeholder="Enter Name" id="name">
+        <span id="en"></span><br><br>
+        Enter Father Name:
+        <input type="email" placeholder="Enter Email" id="email">
+        <span id="em"></span><br><br>
+        Enter Mobile Number:
+        <input type="text" placeholder="Mobile Number" id="mobile">
+        <span id="mb"></span><br><br>
+        Username:       
+        <input type="text" placeholder="Username" id="username">
+        <span id="un"></span><br><br>
+        Password:
+        <input type="password" placeholder="Password" id="password">
+        <span id="ps"></span><br><br>
+        City:
+        <input type="text" placeholder="City" id="city">
+        <span id="ct"></span><br><br>
+        Pincode:
+        <input type="text" placeholder="Pincode" id="pin">
+        <span id="pn"></span><br><br>
+        State:
+        <input type="text" placeholder="State" id="state">
+        <span id="st"></span><br><br>
+        Country:
+        <input type="text" placeholder="Country" id="country">
+        <span id="cn"></span><br><br>
+        Address:
+        <input type="text" placeholder="Address" id="address">
+        <span id="ad"></span><br><br>
+
+        <input type="button" value="Check" onclick="ch()">
+
+        <script>
+            function ch() {
+
+                let a = document.getElementById('name');
+                let pname = /^[a-zA-Z ]{3,30}$/;
+                let c1 = pname.test(a.value);
+
+                let em = document.getElementById('email');
+                let pem = /^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]{2,10}$/;
+                let c2 = pem.test(em.value);
+
+                let mb = document.getElementById('mobile');
+                let pmob = /^[0-9]{10}$/;
+                let c3 = pmob.test(mb.value);
+
+                let un = document.getElementById('username');
+                let pun = /^[a-zA-Z0-9]{5,20}$/;
+                let c4 = pun.test(un.value);
+
+                let ps = document.getElementById('password');
+                let ppass = /^[A-Za-z0-9@#$%^&*!]{6,15}$/;
+                let c5 = ppass.test(ps.value);
+
+                let ct = document.getElementById('city');
+                let pcity = /^[a-zA-Z ]{3,25}$/;
+                let c6 = pcity.test(ct.value);
+
+                let pn = document.getElementById('pin');
+                let ppin = /^[0-9]{6}$/;
+                let c7 = ppin.test(pn.value);
+
+                let st = document.getElementById('state');
+                let pstate = /^[a-zA-Z ]{3,25}$/;
+                let c8 = pstate.test(st.value);
+
+                let cn = document.getElementById('country');
+                let pcountry = /^[a-zA-Z ]{3,25}$/;
+                let c9 = pcountry.test(cn.value);
+
+                let ad = document.getElementById('address');
+                let padd = /^[a-zA-Z0-9 ,.-]{5,50}$/;
+                let c10 = padd.test(ad.value);
+
+                // Name
+                if (!c1) {
+                    a.style.border = "2px solid red";
+                    document.getElementById('en').style.color = "red";
+                    document.getElementById('en').innerHTML = "Invalid Name";
+                } else {
+                    a.style.border = "2px solid black";
+                    document.getElementById('en').innerHTML = "";
+                }
+
+                // Email
+                if (!c2) {
+                    em.style.border = "2px solid red";
+                    document.getElementById('em').style.color = "red";
+                    document.getElementById('em').innerHTML = "Invalid Email";
+                } else {
+                    em.style.border = "2px solid black";
+                    document.getElementById('em').innerHTML = "";
+                }
+
+                // Mobile
+                if (!c3) {
+                    mb.style.border = "2px solid red";
+                    document.getElementById('mb').style.color = "red";
+                    document.getElementById('mb').innerHTML = "Invalid Mobile";
+                } else {
+                    mb.style.border = "2px solid black";
+                    document.getElementById('mb').innerHTML = "";
+                }
+
+                // Username
+                if (!c4) {
+                    un.style.border = "2px solid red";
+                    document.getElementById('un').style.color = "red";
+                    document.getElementById('un').innerHTML = "Invalid Username";
+                } else {
+                    un.style.border = "2px solid black";
+                    document.getElementById('un').innerHTML = "";
+                }
+
+                // Password
+                if (!c5) {
+                    ps.style.border = "2px solid red";
+                    document.getElementById('ps').style.color = "red";
+                    document.getElementById('ps').innerHTML = "Invalid Password";
+                } else {
+                    ps.style.border = "2px solid black";
+                    document.getElementById('ps').innerHTML = "";
+                }
+
+                // City
+                if (!c6) {
+                    ct.style.border = "2px solid red";
+                    document.getElementById('ct').style.color = "red";
+                    document.getElementById('ct').innerHTML = "Invalid City";
+                } else {
+                    ct.style.border = "2px solid black";
+                    document.getElementById('ct').innerHTML = "";
+                }
+
+                // Pin
+                if (!c7) {
+                    pn.style.border = "2px solid red";
+                    document.getElementById('pn').style.color = "red";
+                    document.getElementById('pn').innerHTML = "Invalid Pincode";
+                } else {
+                    pn.style.border = "2px solid black";
+                    document.getElementById('pn').innerHTML = "";
+                }
+
+                // State
+                if (!c8) {
+                    st.style.border = "2px solid red";
+                    document.getElementById('st').style.color = "red";
+                    document.getElementById('st').innerHTML = "Invalid State";
+                } else {
+                    st.style.border = "2px solid black";
+                    document.getElementById('st').innerHTML = "";
+                }
+
+                // Country
+                if (!c9) {
+                    cn.style.border = "2px solid red";
+                    document.getElementById('cn').style.color = "red";
+                    document.getElementById('cn').innerHTML = "Invalid Country";
+                } else {
+                    cn.style.border = "2px solid black";
+                    document.getElementById('cn').innerHTML = "";
+                }
+
+                // Address
+                if (!c10) {
+                    ad.style.border = "2px solid red";
+                    document.getElementById('ad').style.color = "red";
+                    document.getElementById('ad').innerHTML = "Invalid Address";
+                } else {
+                    ad.style.border = "2px solid black";
+                    document.getElementById('ad').innerHTML = "";
+                }
+            }
+        </script>
+    </form>
+</body>
+
+</html>
