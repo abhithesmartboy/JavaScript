@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+function add()
+{
+//window.alert("hii hii");
+var a=document.getElementById("f").value;
+//window.alert(a);
+var b=document.getElementById("s").value;
+//window.alert(b);
+var sum=parseInt(a)+parseInt(b);
+//window.alert("Sum ="+sum);
+//document.write("Sum ="+sum);
+document.getElementById("h1").innerHTML=sum;
+}
+</script>
+</head>
+<body>
+Enter first number
+<input type="text" id="f"/>
+</br>
+Enetr second number
+<input type="text" id="s"/>
+</br>
+<input type="button" value="ADD" onclick="add()"/>
+<h1 id="h1"></h1>
+</body>
+</html>

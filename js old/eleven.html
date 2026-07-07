@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function great() {
+    // Take input using prompt
+    var a = Number(window.prompt("Enter first number:"));
+    var b = Number(window.prompt("Enter second number:"));
+
+    // Compare numbers
+    if (a > b) {
+        document.getElementById("h1").innerHTML = "First number is greater";
+    } else if (b > a) {
+        document.getElementById("h1").innerHTML = "Second number is greater";
+    } else {
+        document.getElementById("h1").innerHTML = "Both numbers are equal";
+    }
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="great()" value="Check"/>
+<h1 id="h1"></h1>
+</body>
+</html>

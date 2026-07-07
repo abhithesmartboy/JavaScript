@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+
+var a = Number(window.prompt("Enter first number:"));
+var b = Number(window.prompt("Enter second number:"));
+var c = Number(window.prompt("Enter third number:"));
+a=parseInt(a);
+b=parseInt(b);
+c=parseInt(c);
+if (a > b && a > c) {
+document.getElementById("h1").innerHTML = "First number is greatest";
+} else if (b > a && b > c) {
+document.getElementById("h1").innerHTML = "Second number is greatest";
+} else if (c > a && c > b) {
+document.getElementById("h1").innerHTML = "Third number is greatest";
+} else {
+document.getElementById("h1").innerHTML = "Numbers are equal or invalid";
+}
+
+</script>
+</head>
+<body>
+
+<h1 id="h1"></h1>
+</body>
+</html>

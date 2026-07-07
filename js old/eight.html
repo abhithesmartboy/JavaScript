@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+function great()
+{
+//window.alert("hii hii");
+var a=document.getElementById("f").value;
+//window.alert(a);
+var b=document.getElementById("s").value;
+//window.alert(b);
+var c=document.getElementById("th").value;
+//window.alert(c);
+
+if (a > b && a > c) {
+        document.getElementById("h1").innerHTML = "First number is great";
+    } else if (b > a && b > c) {
+        document.getElementById("h1").innerHTML = "Second number is great";
+    } else if (c > a && c > b) {
+        document.getElementById("h1").innerHTML = "Third number is great";
+    } else {
+        document.getElementById("h1").innerHTML = "Numbers are equal or invalid";
+    }
+}
+
+</script>
+</head>
+<body>
+Enter first number :
+<input type="text" id="f"/>
+</br>
+Enter second number :
+<input type="text" id="s"/>
+</br>
+Enter third number :
+<input type="text" id="th"/>
+</br>
+
+
+<input type="button" onclick="great()" value="check"/>
+<h1 id="h1"></h1>
+</body>
+</html>

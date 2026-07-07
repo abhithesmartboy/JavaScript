@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+function sw()
+{
+//window.alert("Hii Hii");
+var t1=document.getElementById("h1").innerHTML;
+//alert(t1);
+var t2=document.getElementById("h3").innerHTML;
+//alert(t2);
+var status=window.confirm("Kya aap swap karna chahate hai");
+//alert(status);
+if(status==true)
+{
+document.getElementById("h1").innerHTML=t2;
+document.getElementById("h3").innerHTML=t1;
+}
+else
+{
+window.alert("Swap nhi hua");
+}
+}
+</script>
+</head>
+<body>
+<h1 id="h1"> Abhishek Prajapati</h1>
+<h3 id="h3">SoftPro India</h3>
+<input type="button" value="SWAP" onclick="sw()"/>
+</body>
+</html>

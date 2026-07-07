@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+function rev()
+{
+//alert("abhi");
+var num=document.getElementById("num").value;
+num=Number(num);
+//alert(num);
+var rev=0;
+while(num>0)
+{
+var d=num%10;
+ rev=rev*10+d;
+ num=parseInt(num/10);
+}
+document.getElementById("res").value=rev;
+}
+</script>
+</head>
+<body>
+Enter a Number
+<input type="text" id="num"/>
+</br>
+<input type="button" value="reverse" onclick="rev()"/>
+</br>
+result: <input type="text" id="res">
+</body>
+</html>
+
+

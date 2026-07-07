@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function qty()
+{
+//alert("hii")
+var pp=document.getElementById("ppp").innerHTML;
+//alert(pp);
+var qpp=document.getElementById("one").value;
+//alert(qpp);
+var to=pp*qpp;
+document.getElementById("tp").innerHTML=to;
+}
+</script>
+</head>
+<body>
+<p id="ppp">3298</p>
+Quantity<select id="one" onchange="qty()">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<p id="tp">3298</p>
+</body>
+</html>

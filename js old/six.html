@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+//WAP to check given number is even or odd
+function evenodd()
+{
+//window.alert("hii hii");
+var a=document.getElementById("f").value;
+//window.alert(a);
+if(a%2==0)
+{
+//window.alert("even");
+document.getElementById("h1").innerHTML="even";
+}else{
+//window.alert("odd");
+document.getElementById("h1").innerHTML="odd";
+
+}
+
+}
+</script>
+</head>
+<body>
+Enter first number
+<input type="text" id="f"/>
+<br/>
+<input type="button" onclick="evenodd()" value="check"/>
+<h1 id="h1"></h1>
+</body>
+</html>
